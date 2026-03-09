@@ -18,7 +18,7 @@ fn perform_operation(operation: FileOperation) {
 
             match result {
                 Ok(status) if status.success() => {}
-                _ => eprintln!("Failed to list directory."),
+                _ => eprintln!("Failed to execute ls"),
             }
         }
 
@@ -29,7 +29,7 @@ fn perform_operation(operation: FileOperation) {
 
             match result {
                 Ok(status) if status.success() => {}
-                _ => eprintln!("Failed to display file."),
+                _ => eprintln!("Failed to execute cat"),
             }
         }
 
@@ -67,7 +67,7 @@ fn perform_operation(operation: FileOperation) {
 
             match result {
                 Ok(status) if status.success() => {}
-                _ => eprintln!("Failed to get working directory."),
+                _ => eprintln!("Failed to execute pwd"),
             }
         }
     }
